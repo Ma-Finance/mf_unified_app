@@ -1,5 +1,12 @@
 {
   "appId": "com.madhavfinance.app",
   "appName": "Madhav Finance",
-  "webDir": "www"
+  "webDir": "www",
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "notification_icon",
+      "iconColor": "#488AFF",
+      "sound": "beep.wav"
+    }
+  }
 }
