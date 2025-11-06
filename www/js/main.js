@@ -39,11 +39,14 @@ function service_runner () {
 }
 
 (function (){
-  setTimeout(() => {
+  setTimeout(async () => {
     document.getElementById('splash').style.display = 'none';
     service_runner();
+    
+    // Initialize and start daily morning notifications
+    if (window.notificationService) {
+      await window.notificationService.init();
+      await window.notificationService.scheduleDailyMorningNotification();
+    }
   }, 1000);
-
-  
-
 })();
