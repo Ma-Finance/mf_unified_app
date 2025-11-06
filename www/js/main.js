@@ -1,4 +1,4 @@
-(function () {
+function service_runner () {
   const iframe = document.getElementById('webapp');
   const offlineDiv = document.getElementById('offline');
   const appContainer = document.getElementById('app-container');
@@ -36,4 +36,14 @@
 
   // Periodic check (every 10 s) in case network recovers while app is backgrounded
   setInterval(checkConnection, 10000);
+}
+
+(function (){
+  setTimeout(() => {
+    document.getElementById('splash').style.display = 'none';
+    service_runner();
+  }, 1000);
+
+  
+
 })();

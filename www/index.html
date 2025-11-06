@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Madhav Finance</title>
-  <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Madhav Finance</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="app-container">
-    <iframe id="webapp" src="https://v1.madhavfinance.com" frameborder="0" style="width:100%;height:100vh;border:none;"></iframe>
-  </div>
-
-  <div id="offline" class="offline-screen">
-    <div>
-      <h1>No Internet Connection</h1>
-      <p>Please check your network and try again.</p>
-      <button onclick="location.reload()">Retry</button>
-
+	<div class="splash" id="splash">
+        <img src="assets/mf_splash_icon.png" alt="" style="max-width: 50%;">
     </div>
-  </div>
 
-  <script src="js/main.js"></script>
+	<div id="app-container" class="hidden">
+		<iframe id="webapp" src="https://v1.madhavfinance.com" frameborder="0" style="width:100%;height:100vh;border:none;"></iframe>
+	</div>
+
+	<div id="offline" class="offline-screen">
+		<div>
+			<h1>No Internet Connection</h1>
+			<p>Please check your network and try again.</p>
+			<button onclick="location.reload()">Retry</button>
+
+		</div>
+	</div>
+	<script src="js/main.js"></script>
 </body>
 </html>
